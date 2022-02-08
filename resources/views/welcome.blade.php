@@ -10,11 +10,11 @@
 <div>
     <nav>
         <ul class="navbar sticky">
-            <li> <a href="/">Home</a></li>
-            <li> <a href="/profile.html"> Profile</a> </li>
-            <li> <a href="/dashboard.html"> Dashboard</a></li>
-            <li> <a href="/faq.html"> FAQ</a></li>
-            <li> <a href="/postfeed.html"> Blog</a></li>
+            <li> <a href="/home">Home</a></li>
+            <li> <a href="/profile"> Profile</a> </li>
+            <li> <a href="/dashboard"> Dashboard</a></li>
+            <li> <a href="/faq"> FAQ</a></li>
+            <li> <a href="/blog"> Blog</a></li>
             <img class="hz-image"
                  src="https://th.bing.com/th/id/OIP.VuOx_zmNq-m0TBZqw2vuwwHaHa?w=178&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
             </img>

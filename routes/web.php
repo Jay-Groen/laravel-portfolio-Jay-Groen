@@ -6,6 +6,16 @@ use App\Http\Controllers\TestController;
 
 use App\Http\Controllers\WelcomeController;
 
+use App\Http\Controllers\ProfileController;
+
+use App\Http\Controllers\DashboardController;
+
+use App\Http\Controllers\FaqController;
+
+use App\Http\Controllers\PostfeedController;
+
+use App\Http\Controllers\StudiekeuzeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +30,13 @@ use App\Http\Controllers\WelcomeController;
 Route::get('/tests/{test}', [TestController::class, 'show']);
 
 Route::get('home', [WelcomeController::class, 'show']);
+
+Route::get('profile', [ProfileController::class, 'show']);
+
+Route::get('dashboard', [DashboardController::class, 'show']);
+
+Route::get('faq', [FaqController::class, 'show']);
+
+Route::get('blog', [PostfeedController::class, 'show']);
+
+Route::get('studiekeuze', [StudiekeuzeController::class, 'show']);
