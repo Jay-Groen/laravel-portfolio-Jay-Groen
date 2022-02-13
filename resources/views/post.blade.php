@@ -13,6 +13,6 @@
 <body>
     <h1>My Test</h1>
 
-    <p>{{$test}}</p>
+    <p>{{ $test -> role }}</p>
 </body>
 </html>

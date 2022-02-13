@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Person;
+use Illuminate\Support\Facades\DB;
+
+
 class TestController
 {
-    public function show($test)
+    public function show($name)
         {
-            $tests = [
-                'first' => 'Hello Diego',
-                'second' => 'Hello Wink'
-            ];
+//            $test = \DB::table('persons')->where('name', $name)->first();
 
-            if (! array_key_exists($test, $tests)) {
-                abort(404, 'That is not possible!');
+        $test = Person::where('name', $name)->first();
+
+            if(! $test) {
+                abort(404);
             }
 
             return view('post', [
-                'test' => $tests[$test]
+                'test' => $test
             ]);
         }
 
