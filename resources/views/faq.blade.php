@@ -105,6 +105,11 @@
         </li>
         <button onclick="myFunction5()" id="myBtn5">Read more</button>
     </ul>
+    <ul>
+        @foreach($faqs as $faq)
+            <li>{{ $faq -> question }}</li>
+        @endforeach
+    </ul>
 </div>
 </body>
 
