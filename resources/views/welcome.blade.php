@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <title>Homepagina Jay Groenendijk</title>
-    <link rel="stylesheet" href="Css/myStyle.css" type="text/css" media="all">
-</head>
+@section('content')
 
-<body>
 <div>
     <nav>
         <ul class="navbar sticky">
@@ -21,8 +16,6 @@
         </ul>
     </nav>
 </div>
-<main>
-</main>
 <div class="homepage-tekst">
     <h1>
         Homepage van <br> Jay Groenendijk
@@ -45,6 +38,4 @@
     </p>
 </div>
 
-</body>
-
-</html>
+@endsection
