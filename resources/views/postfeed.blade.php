@@ -3,8 +3,8 @@
 @section('blog')
     <h1 class="header-blog">Blog</h1>
     <div class="studiekeuze">
-        <h2>Studiekeuze</h2>
-        <a href="/studiekeuze">Studiekeuze</a>
+        <h2> Studiekeuze</h2>
+        <a href="/articles/1">Studiekeuze</a>
         <p>23-9-2021</p>
     </div>
     <div class="swot">

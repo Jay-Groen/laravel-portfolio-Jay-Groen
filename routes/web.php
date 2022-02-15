@@ -37,6 +37,6 @@ Route::get('dashboard', [DashboardController::class, 'show']);
 
 Route::get('faq', [FaqController::class, 'show']);
 
-Route::get('blog', [PostfeedController::class, 'show']);
+Route::get('/articles/', [PostfeedController::class, 'show']);
 
-Route::get('studiekeuze', [StudiekeuzeController::class, 'show']);
+Route::get('/articles/{article}', [StudiekeuzeController::class, 'show']);
