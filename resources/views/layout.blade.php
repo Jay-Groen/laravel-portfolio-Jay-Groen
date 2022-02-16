@@ -29,6 +29,7 @@
     @yield('faq')
     @yield('study-choice')
     @yield('show')
+    @yield('create')
 </body>
 
 </html>
