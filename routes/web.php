@@ -41,3 +41,5 @@ Route::get('/articles', [PostfeedController::class, 'index']);
 Route::post('/articles', [PostfeedController::class, 'store']);
 Route::get('/articles/create', [PostfeedController::class, 'create']);
 Route::get('/articles/{article}', [PostfeedController::class, 'show']);
+Route::get('/articles/{article}/edit', [PostfeedController::class, 'edit']);
+Route::put('/articles/{article}', [PostfeedController::class, 'update']);

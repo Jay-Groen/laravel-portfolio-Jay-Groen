@@ -30,6 +30,7 @@
     @yield('study-choice')
     @yield('show')
     @yield('create')
+    @yield('edit')
 </body>
 
 </html>
