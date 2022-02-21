@@ -5,6 +5,8 @@
     <div class="studiekeuze">
         <h2> Studiekeuze</h2>
         <a href="/articles/1">Studiekeuze</a>
+        <br>
+        <a href="/articles/create">Create</a>
         <p>23-9-2021</p>
     </div>
     <div class="swot">

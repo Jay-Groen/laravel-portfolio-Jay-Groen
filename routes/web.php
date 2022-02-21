@@ -37,9 +37,12 @@ Route::get('dashboard', [DashboardController::class, 'show']);
 
 Route::get('faq', [FaqController::class, 'show']);
 
-Route::get('/articles', [PostfeedController::class, 'index']);
-Route::post('/articles', [PostfeedController::class, 'store']);
-Route::get('/articles/create', [PostfeedController::class, 'create']);
-Route::get('/articles/{article}', [PostfeedController::class, 'show']);
-Route::get('/articles/{article}/edit', [PostfeedController::class, 'edit']);
-Route::put('/articles/{article}', [PostfeedController::class, 'update']);
+//Route::get('/articles', [PostfeedController::class, 'index']);
+//Route::post('/articles', [PostfeedController::class, 'store']);
+//Route::get('/articles/create', [PostfeedController::class, 'create']);
+//Route::get('/articles/{article}', [PostfeedController::class, 'show']);
+//Route::get('/articles/{article}/edit', [PostfeedController::class, 'edit']);
+//Route::put('/articles/{article}', [PostfeedController::class, 'update']);
+//Route::delete('/articles/{article}', [PostfeedController::class, 'destroy']);
+
+Route::resource('/articles', PostfeedController::class);

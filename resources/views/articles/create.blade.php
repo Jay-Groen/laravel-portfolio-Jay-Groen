@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('create')
+@section('study-choice')
     <div id="wrapper">
         <div id="page" class="container">
             <h1>New Article</h1>

@@ -1,9 +1,9 @@
 @extends('layout')
 
-@section('study-choice')
+@section('edit')
     <div id="wrapper">
         <div id="page" class="container">
-            <h1>Update Article</h1>
+            <h1>Update Article {{$article->id}}</h1>
 
             <form method="POST" action="/articles/{{$article->id}}">
                 @csrf
@@ -39,6 +39,11 @@
                     </div>
                 </div>
 
+            </form>
+            <form method="POST" action="/articles/{{ $article->id }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Delete</button>
             </form>
         </div>
     </div>

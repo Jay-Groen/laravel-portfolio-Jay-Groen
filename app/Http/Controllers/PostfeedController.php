@@ -56,4 +56,17 @@ class PostfeedController
 
         return redirect('/articles/' . $article->id);
     }
+
+    public function destroy($id)
+    {
+        $article = Article::find($id);
+
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+
+        $article->delete();
+
+        return redirect('/articles/');
+    }
 }
