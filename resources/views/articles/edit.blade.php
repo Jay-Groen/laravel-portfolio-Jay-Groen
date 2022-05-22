@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('edit')
+@section('content')
     <div id="wrapper">
         <div id="page" class="container">
             <h1>Update Article {{$article->id}}</h1>

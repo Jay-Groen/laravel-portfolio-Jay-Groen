@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('blog')
+@section('content')
     <h1 class="header-blog">Blog</h1>
     <div class="studiekeuze">
         <h2> Studiekeuze</h2>

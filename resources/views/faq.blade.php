@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('faq')
+@section('content')
     <div class="questions">
         <h1> Frequently Asked Questions </h1>
         <ul>

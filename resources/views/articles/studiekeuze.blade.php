@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('study-choice')
+@section('content')
     <h1 class="header-blog">Blog Studiekeuze</h1>
     <div class="studiekeuze">
         <h2>{{ $article -> title }}</h2>

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('profile')
+@section('content')
     <div class="bg-image img1"></div>
     <div class="bg-image img2"></div>
     <div class="bg-image img3"></div>

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('dashboard')
+@section('content')
     <main>
         <h1 class="dashheader1">Study progress</h1>
         <div class="opleiding-informatie-punten">
