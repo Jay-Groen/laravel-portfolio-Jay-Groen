@@ -46,3 +46,6 @@ Route::get('faq', [FaqController::class, 'show']);
 //Route::delete('/articles/{article}', [PostfeedController::class, 'destroy']);
 
 Route::resource('/articles', PostfeedController::class);
+
+Route::get('/404', fn() => abort(404));
+Route::get('/500', fn() => abort(500));

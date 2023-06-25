@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+    mysql:
+        container_name: mysql
+        image: mysql:latest
+        volumes:
+            - 'apache-mysql:/var/lib/mysql'
+        ports:
+            - '${DB_PORT:-3306}:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: ''
+            MYSQL_ROOT_HOST: '%'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        networks:
+            - jay_groen_network
+
+    php-apache:
+        container_name: apache
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - '${APP_PORT:-80}:80'
+        volumes:
+            - '.:/var/www/html/'
+        networks:
+            - jay_groen_network
+        depends_on:
+            - mysql
+
+    composer:
+        container_name: composer
+        image: composer:latest
+        volumes:
+            - '.:/app'
+        command: ["composer", "install"]
+
+    node:
+        container_name: npm
+        image: node:latest
+        working_dir: /home/node/app
+        volumes:
+            - './:/home/node/app'
+        command: >
+            bash -c "npm install"
+
+volumes:
+    apache-mysql:
+        driver: local
+
+networks:
+    jay_groen_network:
+      driver: bridge
