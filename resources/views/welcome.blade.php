@@ -4,7 +4,7 @@
 
 <div class="homepage-tekst">
     <h1>
-        Homepage van <br> Jay Groenendijk
+        Dashboardpage van <br> Jay Groenendijk
     </h1>
     <p>
         Student aan de HBO ICT-opleiding op <a href="https://hz.nl/">HZ University Of Applied Sciences</a>

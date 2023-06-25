@@ -49,3 +49,5 @@ Route::resource('/articles', PostfeedController::class);
 
 Route::get('/404', fn() => abort(404));
 Route::get('/500', fn() => abort(500));
+
+\Illuminate\Support\Facades\Auth::routes();
