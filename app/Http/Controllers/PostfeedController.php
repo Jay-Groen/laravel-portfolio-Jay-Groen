@@ -11,16 +11,14 @@ class PostfeedController
 
         $articles = Article::latest()->get();
 
-        return view('postfeed', [
-            'articles' => $articles
-        ]);
+        return view('postfeed', compact('articles'));
     }
 
     public function show($id) {
 
         $article = Article::find($id);
 
-        return view('articles.studiekeuze', ['article' => $article]);
+        return view('articles.article', compact('article'));
     }
 
     public function create() {
@@ -31,17 +29,15 @@ class PostfeedController
 
         request()->validate([
             'title' => 'required',
-            'excerpt' => 'required',
             'body' => 'required'
         ]);
 
         $article = new Article();
         $article->title = request('title');
-        $article->excerpt = request('excerpt');
         $article->body = request('body');
         $article->save();
 
-        return redirect('/articles/1');
+        return redirect('articles')->with('success', 'Post created successfully.');
     }
 
     public function edit($id)
@@ -55,19 +51,17 @@ class PostfeedController
     {
         request()->validate([
             'title' => 'required',
-            'excerpt' => 'required',
             'body' => 'required'
         ]);
 
         $article = Article::find($id);
 
         $article->title = request('title');
-        $article->excerpt = request('excerpt');
         $article->body = request('body');
 
         $article->save();
 
-        return redirect('/articles/' . $article->id);
+        return redirect('articles')->with('success', 'Post created successfully.');
     }
 
     public function destroy($id)
@@ -75,11 +69,10 @@ class PostfeedController
         $article = Article::find($id);
 
         $article->title = request('title');
-        $article->excerpt = request('excerpt');
         $article->body = request('body');
 
         $article->delete();
 
-        return redirect('/articles/');
+        return redirect('articles');
     }
 }

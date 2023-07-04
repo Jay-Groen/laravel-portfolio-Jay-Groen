@@ -18,14 +18,6 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="excerpt">Excerpt</label>
-
-                    <div class="control">
-                        <textarea class="textarea" name="excerpt" id="excerpt">{{ $article->excerpt }}</textarea>
-                    </div>
-                </div>
-
-                <div class="field">
                     <label class="label" for="body"></label>
 
                     <div class="control">
