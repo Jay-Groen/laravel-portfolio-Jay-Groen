@@ -26,16 +26,10 @@ use App\Http\Controllers\StudiekeuzeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Support\Facades\App;
-
-if (App::environment('production')) {
-    // The environment is production
-    // Perform actions specific to the production environment
-    Route::get('home', [WelcomeController::class, 'show']);
-}
-
 
 Route::get('/tests/{test}', [TestController::class, 'show']);
+
+Route::get('home', [WelcomeController::class, 'show']);
 
 Route::get('profile', [ProfileController::class, 'show']);
 
