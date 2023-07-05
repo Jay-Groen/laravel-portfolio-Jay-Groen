@@ -10,9 +10,7 @@
         Student aan de HBO ICT-opleiding op <a href="https://hz.nl/">HZ University Of Applied Sciences</a>
     </p>
 </div>
-<div>
-    <img class="hz-gebouw" src="img/hz_middelburg_foto_1.jpg">
-</div>
+
 <div class="waarom-ik-bij-de-opleiding-pas">
     <h3>
         Waarom ik bij de opleiding pas

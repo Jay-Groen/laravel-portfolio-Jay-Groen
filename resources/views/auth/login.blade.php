@@ -52,5 +52,6 @@
                 </x-button>
             </div>
         </form>
+        <a href="register">Click here to register if you do not have an account</a>
     </x-auth-card>
 </x-guest-layout>

@@ -55,5 +55,6 @@
                 </x-button>
             </div>
         </form>
+        <a href="login">Click here to login if you already have an account</a>
     </x-auth-card>
 </x-guest-layout>
