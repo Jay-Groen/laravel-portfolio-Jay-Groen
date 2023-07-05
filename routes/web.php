@@ -31,7 +31,7 @@ Route::get('/tests/{test}', [TestController::class, 'show']);
 
 Route::get('home', [WelcomeController::class, 'show']);
 
-Route::get('profile', [ProfileController::class, 'show']);
+Route::get('profile', [ProfileController::class, 'show'])->middleware('auth');
 
 Route::get('dashboard', [DashboardController::class, 'show']);
 
