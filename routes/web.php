@@ -52,4 +52,4 @@ Route::get('/500', fn() => abort(500));
 
 \Illuminate\Support\Facades\Auth::routes();
 
-
+URL::forceScheme('https');
