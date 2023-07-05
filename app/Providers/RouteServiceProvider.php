@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = 'https://limitless-hamlet-05766-ce22fa60ef6f.herokuapp.com/home';
+    public const HOME = 'https://limitless-hamlet-05766-ce22fa60ef6f.herokuapp.com';
 
     /**
      * The controller namespace for the application.
