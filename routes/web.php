@@ -27,15 +27,41 @@ use App\Http\Controllers\StudiekeuzeController;
 |
 */
 
-Route::get('/tests/{test}', [TestController::class, 'show']);
+//Route::get('/tests/{test}', [TestController::class, 'show']);
+//
+//Route::get('home', [WelcomeController::class, 'show']);
+//
+//Route::get('profile', [ProfileController::class, 'show']);
+//
+//Route::get('dashboard', [DashboardController::class, 'show']);
+//
+//Route::get('faq', [FaqController::class, 'show']);
+//
+////Route::get('/articles', [PostfeedController::class, 'index']);
+////Route::post('/articles', [PostfeedController::class, 'store']);
+////Route::get('/articles/create', [PostfeedController::class, 'create']);
+////Route::get('/articles/{article}', [PostfeedController::class, 'show']);
+////Route::get('/articles/{article}/edit', [PostfeedController::class, 'edit']);
+////Route::put('/articles/{article}', [PostfeedController::class, 'update']);
+////Route::delete('/articles/{article}', [PostfeedController::class, 'destroy']);
+//
+//Route::resource('/articles', PostfeedController::class)->middleware('auth');
+//
+//Route::get('/404', fn() => abort(404));
+//Route::get('/500', fn() => abort(500));
+//
+//\Illuminate\Support\Facades\Auth::routes();
 
-Route::get('home', [WelcomeController::class, 'show']);
+Route::group(['scheme' => 'https'], function () {
+    Route::get('/tests/{test}', [TestController::class, 'show']);
 
-Route::get('profile', [ProfileController::class, 'show']);
+    Route::get('home', [WelcomeController::class, 'show']);
 
-Route::get('dashboard', [DashboardController::class, 'show']);
+    Route::get('profile', [ProfileController::class, 'show']);
 
-Route::get('faq', [FaqController::class, 'show']);
+    Route::get('dashboard', [DashboardController::class, 'show']);
+
+    Route::get('faq', [FaqController::class, 'show']);
 
 //Route::get('/articles', [PostfeedController::class, 'index']);
 //Route::post('/articles', [PostfeedController::class, 'store']);
@@ -45,9 +71,10 @@ Route::get('faq', [FaqController::class, 'show']);
 //Route::put('/articles/{article}', [PostfeedController::class, 'update']);
 //Route::delete('/articles/{article}', [PostfeedController::class, 'destroy']);
 
-Route::resource('/articles', PostfeedController::class)->middleware('auth');
+    Route::resource('/articles', PostfeedController::class)->middleware('auth');
 
-Route::get('/404', fn() => abort(404));
-Route::get('/500', fn() => abort(500));
+    Route::get('/404', fn() => abort(404));
+    Route::get('/500', fn() => abort(500));
 
-\Illuminate\Support\Facades\Auth::routes();
+    \Illuminate\Support\Facades\Auth::routes();
+});
